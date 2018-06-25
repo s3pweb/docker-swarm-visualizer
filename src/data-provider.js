@@ -83,12 +83,12 @@ let physicalStructProvider = ([initialNodes, initialContainers]) => {
 
                 let imageTag = "<div style='height: 100%; padding: 5px 5px 5px 5px; border: 2px solid " + color + "'>" +
                     "<span class='contname' style='color: white; font-weight: bold;font-size: 12px'>" + serviceName + "</span>" +
-                    "<br/> image : " + imageNameMatches[0] +
-                    "<br/> tag : " + (tagName ? tagName : "latest") +
-                    "<br/>" + (cloned.Spec.ContainerSpec.Args ? " cmd : " + cloned.Spec.ContainerSpec.Args + "<br/>" : "") +
-                    " updated : " + dateStamp +
-                    "<br/>" + cloned.Status.ContainerStatus.ContainerID +
-                    "<br/> state : " + startState +
+                    // "<br/> image : " + imageNameMatches[0] +
+                    // "<br/> tag : " + (tagName ? tagName : "latest") +
+                    // "<br/>" + (cloned.Spec.ContainerSpec.Args ? " cmd : " + cloned.Spec.ContainerSpec.Args + "<br/>" : "") +
+                    // " updated : " + dateStamp +
+                    // "<br/>" + cloned.Status.ContainerStatus.ContainerID +
+                    // "<br/> state : " + startState +
                     "</div>";
 
                 if (node.Spec.Role == 'manager') {
@@ -174,7 +174,7 @@ let physicalStructProvider = ([initialNodes, initialContainers]) => {
                                 currentnode.Description.Hostname = name;
                                 currentnode.name = name + " <br/><span class='noderole'>" + node.Spec.Role +
                                     "</span><br/><span class='nodemem'>" + (currentnode.Description.Resources.MemoryBytes / 1024 / 1024 / 1024).toFixed(3) + "G RAM</span><br/>" +
-                                    "<span class='nodeplatform'>" + (currentnode.Description.Platform.Architecture) + "/" + (currentnode.Description.Platform.OS) + "</span>" +
+                                    // "<span class='nodeplatform'>" + (currentnode.Description.Platform.Architecture) + "/" + (currentnode.Description.Platform.OS) + "</span>" +
                                     "<div class='labelarea'>";
                                 for (var key in node.Spec.Labels) {
                                     if (node.Spec.Labels[key].length > 0) {
